@@ -20,6 +20,13 @@ export default defineConfig(({ command }) => {
       host: true,
       allowedHosts: true,
     },
+    build: {
+      rolldownOptions: {
+        experimental: {
+          chunkOptimization: false,
+        },
+      },
+    },
     plugins: [
       tailwindcss(),
       tanstackStart(),
